@@ -5,3 +5,14 @@
     color: white;
     background-color: black;
 }
+
+.cont {
+    display: flex;
+    width: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.price {
+    margin-left: 100px;
+}
