@@ -6,6 +6,13 @@
     background-color: black;
 }
 
+.btn_currency {
+    width: 80px;
+    margin-left: 15px;
+    padding: 10px;
+    color: white;
+    background-color: green
+}
 .cont {
     display: flex;
     width: 200px;

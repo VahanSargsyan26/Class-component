@@ -8,6 +8,7 @@ export default class Counter extends Component{
         this.state={
             value: 0,
             price: 0,
+            currency: "$"
         } 
 
     }
@@ -35,6 +36,20 @@ export default class Counter extends Component{
         })
     }
 
+    ChangeCurrency = ()=> {
+        this.setState({
+            price: this.state.price / 400,
+            currency: "AMD"
+        })
+    }  
+    RestoreCurrency = ()=> {
+        this.setState({
+            price: this.state.price * 400,
+            currency: "$"
+        })
+    }  
+     
+
     render() {
         return(
             <div>
@@ -43,7 +58,7 @@ export default class Counter extends Component{
                 <button className="btn" onClick={this.ClickPlus}>+</button>
                 <button className="btn" onClick={this.ClickMinus}>-</button>
 
-                <p className="price">Price {this.state.price} $</p>
+                <p className="price">Price {this.state.price} {this.state.currency} </p>
 
                 <div className="cont">
                     <h3>Limon 1$</h3>
@@ -54,6 +69,9 @@ export default class Counter extends Component{
                     <h3>Banana 3$</h3>
                     <button className="btn" onClick={this.AddBanana}>+</button>
                 </div>
+
+                <button className="btn_currency" onClick={this.ChangeCurrency}>AMD</button>
+                <button className="btn_currency" onClick={this.RestoreCurrency}>USD</button>
 
             </div>
         );
